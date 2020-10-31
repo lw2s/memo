@@ -36,6 +36,13 @@ export PATH=$HOME/memo:$PATH
 $ source ~/.zshrc
 ```
 
+memoのパーミッションを755に変更
+
+```
+$ cd memo
+$ chmod 755 memo
+```
+
 ## オプション
 
 |  オプション  |  内容  |
