@@ -1,0 +1,4 @@
+vendor/
+storage/memo_history.txt
+storage/memo.txt
+storage/single_memo_history.txt
