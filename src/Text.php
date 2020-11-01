@@ -41,6 +41,6 @@ class Text
      */
     public function register()
     {
-        file_put_contents("storage/memo.txt", $this->text);
+        file_put_contents(__DIR__ . "/../storage/memo.txt", $this->text);
     }
 }
