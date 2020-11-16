@@ -120,7 +120,7 @@ class History
         {
             $contents .= $this->explode_line($this->history_file[$history_num - 1]);
         }
-        file_put_contents(__DIR__ . "/../storage/memo_history.txt", $contents);
+        file_put_contents(__DIR__ . "/../storage/" . date("YmdHis") . "_memo_history.txt", $contents);
     }
 
     /**
@@ -129,7 +129,7 @@ class History
     public function registerSingleHistory()
     {
         $history_line = $this->explode_line($this->history_file[$this->history_number - 1]);
-        file_put_contents(__DIR__ . "/../storage/single_memo_history.txt", $history_line);
+        file_put_contents(__DIR__ . "/../storage/" . date("YmdHis") . "single_memo_history.txt", $history_line);
     }
 
     /**

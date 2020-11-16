@@ -6,6 +6,12 @@ class Text
 {
     /** コマンドラインで入力されたテキスト */
     private $text;
+    private $filename;
+
+    public function __construct()
+    {
+        $this->filename = date("YmdHis") . "_memo.txt";
+    }
 
     /**
      * コマンドラインで何もパラメータがついていない場合実行
@@ -41,6 +47,6 @@ class Text
      */
     public function register()
     {
-        file_put_contents(__DIR__ . "/../storage/memo.txt", $this->text);
+        file_put_contents(__DIR__ . "/../storage/" . $this->filename, $this->text);
     }
 }
