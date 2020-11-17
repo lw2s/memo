@@ -1,8 +1,8 @@
-# memo 
+# memo
 
 ## 概要
 
-一言メモや過去に実行したコマンドをメモ（txtファイルに保存）する
+一言メモや過去に実行したコマンドをメモ（txt ファイルに保存）する
 
 ```
 memo [-h]
@@ -10,7 +10,7 @@ memo [-h]
 
 ## 必要
 
-- PHP7以上
+- PHP7 以上
 - Composer
 - zsh
 
@@ -24,7 +24,8 @@ $ composer install
 
 ## 設定
 
-.zshrcに以下を書き込む
+.zshrc に以下を書き込む
+
 ```
 // $HOME/.zshrc
 
@@ -32,11 +33,12 @@ export PATH=$HOME/memo:$PATH
 ```
 
 読み込む
+
 ```
 $ source ~/.zshrc
 ```
 
-memoのパーミッションを755に変更
+memo のパーミッションを 755 に変更
 
 ```
 $ cd memo
@@ -45,14 +47,15 @@ $ chmod 755 memo
 
 ## オプション
 
-|  オプション  |  内容  |
-| ---- | ---- |
-|  なし |   入力されたtextを保存   |
-|  -h  |  過去に実行したコマンドを保存 |
+| オプション | 内容                         |
+| ---------- | ---------------------------- |
+| なし       | 入力された text を保存       |
+| -h         | 過去に実行したコマンドを保存 |
 
 ## 使用例
 
 - **オプションなし**
+
 ```
 $ memo
 
@@ -63,30 +66,30 @@ Please input text: なにか入力
 
 _複数の数字を入力する場合_
 
-1つ数字入力、1つ空白を空ける
-
- ```
-$ memo -h
- 
-977:　git push
-976:　git diff origin/main
-975:　git diff
-973:　git checkout main
-972:　git checkout master
-
-Please choose a number or some numbers: 977 972
- ```
-
-_1つの数字を入力する場合_
+1 つ数字入力、1 つ空白を空ける
 
 ```
 $ memo -h
- 
-977:　git push
-976:　git diff origin/main
-975:　git diff
-973:　git checkout main
+
 972:　git checkout master
+973:　git checkout main
+975:　git diff
+976:　git diff origin/main
+977:　git push
+
+Please choose a number or some numbers: 977 972
+```
+
+_1 つの数字を入力する場合_
+
+```
+$ memo -h
+
+972:　git checkout master
+973:　git checkout main
+975:　git diff
+976:　git diff origin/main
+977:　git push
 
 Please choose a number or some numbers: 977
- ```
+```
