@@ -56,7 +56,7 @@ class History
     {
         $endline = count($this->history_file);
         $duplicate = [];
-        for ($line = $endline; $endline - $this->limit < $line; $line--) {
+        for ($line = $endline - $this->limit; $line <= $endline; $line++) {
             // ; 前後で分割
             $explode_line = explode(";", $this->history_file[$line - 1]);
             // 分割された場合と分割する必要が無かった場合
@@ -67,8 +67,6 @@ class History
             }
             // コマンドをインデックスに、行番号をvalueにして配列に格納
             $duplicate[$index] = $line;
-
-            if ($line === 0) break;
         }
 
         return $duplicate;
